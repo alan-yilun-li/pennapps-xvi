@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Need this to compare to our model pictures.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need this to find locations near you for geocaching and reporting. </string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

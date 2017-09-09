@@ -13,9 +13,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let tabBarController = window?.rootViewController as? UITabBarController {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let pictureViewController = storyboard.instantiateViewController(withIdentifier: "PictureNavController")
+            pictureViewController.tabBarItem = UITabBarItem(title: "Photo", image: #imageLiteral(resourceName: "photo"), tag: 1)
+            tabBarController.viewControllers?.append(pictureViewController)
+            
+            let cameraViewController = storyboard.instantiateViewController(withIdentifier: "CameraNavController")
+            cameraViewController.tabBarItem = UITabBarItem(title: "Camera", image: #imageLiteral(resourceName: "camera"), tag: 2)
+            tabBarController.viewControllers?.append(cameraViewController)
+        }
+
         return true
     }
 

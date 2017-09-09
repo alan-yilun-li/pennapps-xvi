@@ -13,6 +13,7 @@
 		E724B5751F645D9500A3964D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5721F645D9500A3964D /* LaunchScreen.storyboard */; };
 		E724B5761F645D9500A3964D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5731F645D9500A3964D /* Main.storyboard */; };
 		E724B57D1F645E3100A3964D /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724B57C1F645E3100A3964D /* APIKeys.swift */; };
+		E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B80241F64971C009EFC3E /* Randomizer.swift */; };
 		E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC51F64705700912E5C /* MapViewController.swift */; };
 		E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC71F647D3A00912E5C /* Target.swift */; };
 		E7C7ADCA1F6489C500912E5C /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC91F6489C500912E5C /* Colours.swift */; };
@@ -41,6 +42,7 @@
 		E724B5721F645D9500A3964D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E724B5731F645D9500A3964D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E724B57C1F645E3100A3964D /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		E76B80241F64971C009EFC3E /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		E7C7ADC51F64705700912E5C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E7C7ADC71F647D3A00912E5C /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		E7C7ADC91F6489C500912E5C /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		E724B56E1F645D9500A3964D /* Supporting-Files */ = {
 			isa = PBXGroup;
 			children = (
+				E76B80241F64971C009EFC3E /* Randomizer.swift */,
 			);
 			path = "Supporting-Files";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */,
 				E7C7ADCE1F64948400912E5C /* PhotoViewController.swift in Sources */,
 				E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */,
+				E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */,
 				E724B54A1F6459E800A3964D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

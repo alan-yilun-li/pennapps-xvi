@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import CoreLocation
-import GameplayKit
 
 class MapViewController: UIViewController {
 
@@ -52,7 +51,36 @@ class MapViewController: UIViewController {
 
     @IBAction func addTarget(_ sender: Any) {
         
-        print("hello!")
+        print("Attempting to add annotation; currently \(mapView.annotations.count) annotations")
+        
+        if mapView.annotations.count > 1 {
+            
+            let wipeoutAlert = UIAlertController(title: "Warning!", message: "You already have a current target. Give up and select a new one?", preferredStyle: .alert)
+            
+            wipeoutAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { [unowned self] _ in
+                self.giveNewTarget()
+            }))
+            wipeoutAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            
+            present(wipeoutAlert, animated: true)
+            
+        } else {
+        
+            giveNewTarget()
+        }
+        
+    }
+    
+    private func giveNewTarget() {
+        
+        let targetCoordinate = mapView.userLocation.coordinate.randomize()
+        mapView.removeAnnotations(mapView.annotations)
+        
+        let mapAnnotation = MKPointAnnotation()
+        mapAnnotation.coordinate = targetCoordinate
+        mapAnnotation.title = "TARGET_PIN"
+    
+        mapView.addAnnotation(mapAnnotation)
     }
 
 }
@@ -64,6 +92,17 @@ extension MapViewController: MKMapViewDelegate {
     fileprivate func setup(mapView: MKMapView) {
         mapView.delegate = self
         mapView.setUserTrackingMode(.followWithHeading, animated: false)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if (annotation.title != nil) && (annotation.title! == "TARGET_PIN") {
+            let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinview")
+            view.animatesDrop = true
+            return view 
+        } else {
+            return nil
+        }
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

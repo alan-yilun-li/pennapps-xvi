@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B087AD1BB56623FE0E9FD7 /* Pods_pennapps_xviTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109462ADD39DFEACAD2D1FE6 /* Pods_pennapps_xviTests.framework */; };
+		C70201A5FACB57B66FCEC532 /* Pods_pennapps_xvi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2327DA682A42722328545D40 /* Pods_pennapps_xvi.framework */; };
 		E724B54A1F6459E800A3964D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724B5491F6459E800A3964D /* AppDelegate.swift */; };
 		E724B5511F6459E800A3964D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E724B5501F6459E800A3964D /* Assets.xcassets */; };
 		E724B55F1F6459E900A3964D /* pennapps_xviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724B55E1F6459E900A3964D /* pennapps_xviTests.swift */; };
 		E724B5751F645D9500A3964D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5721F645D9500A3964D /* LaunchScreen.storyboard */; };
 		E724B5761F645D9500A3964D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5731F645D9500A3964D /* Main.storyboard */; };
-		E724B57D1F645E3100A3964D /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724B57C1F645E3100A3964D /* APIKeys.swift */; };
+		E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B80241F64971C009EFC3E /* Randomizer.swift */; };
+		E79E98391F64F634000B412A /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E98381F64F634000B412A /* APIKeys.swift */; };
+		E79E983B1F64F7A5000B412A /* StreetViewRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */; };
 		E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC51F64705700912E5C /* MapViewController.swift */; };
 		E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC71F647D3A00912E5C /* Target.swift */; };
 		E7C7ADCA1F6489C500912E5C /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC91F6489C500912E5C /* Colours.swift */; };
@@ -31,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		109462ADD39DFEACAD2D1FE6 /* Pods_pennapps_xviTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pennapps_xviTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2327DA682A42722328545D40 /* Pods_pennapps_xvi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pennapps_xvi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68532BC37EC9649958D130E1 /* Pods-pennapps-xviTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennapps-xviTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pennapps-xviTests/Pods-pennapps-xviTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88CECC0553AF146E2F03687A /* Pods-pennapps-xvi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennapps-xvi.release.xcconfig"; path = "Pods/Target Support Files/Pods-pennapps-xvi/Pods-pennapps-xvi.release.xcconfig"; sourceTree = "<group>"; };
+		8D65620D0923F7C925023122 /* Pods-pennapps-xviTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennapps-xviTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pennapps-xviTests/Pods-pennapps-xviTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB4B1284C87C893D0F7AE1E5 /* Pods-pennapps-xvi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennapps-xvi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pennapps-xvi/Pods-pennapps-xvi.debug.xcconfig"; sourceTree = "<group>"; };
 		E724B5461F6459E800A3964D /* pennapps-xvi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pennapps-xvi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E724B5491F6459E800A3964D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E724B5501F6459E800A3964D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +50,9 @@
 		E724B5601F6459E900A3964D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E724B5721F645D9500A3964D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E724B5731F645D9500A3964D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E724B57C1F645E3100A3964D /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		E76B80241F64971C009EFC3E /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
+		E79E98381F64F634000B412A /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewRequests.swift; sourceTree = "<group>"; };
 		E7C7ADC51F64705700912E5C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E7C7ADC71F647D3A00912E5C /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		E7C7ADC91F6489C500912E5C /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
@@ -53,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70201A5FACB57B66FCEC532 /* Pods_pennapps_xvi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +73,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B087AD1BB56623FE0E9FD7 /* Pods_pennapps_xviTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14A668FE4C8E0A771483BB46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB4B1284C87C893D0F7AE1E5 /* Pods-pennapps-xvi.debug.xcconfig */,
+				88CECC0553AF146E2F03687A /* Pods-pennapps-xvi.release.xcconfig */,
+				68532BC37EC9649958D130E1 /* Pods-pennapps-xviTests.debug.xcconfig */,
+				8D65620D0923F7C925023122 /* Pods-pennapps-xviTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB55F0AFA0459393C5F33A7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2327DA682A42722328545D40 /* Pods_pennapps_xvi.framework */,
+				109462ADD39DFEACAD2D1FE6 /* Pods_pennapps_xviTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E724B53D1F6459E800A3964D = {
 			isa = PBXGroup;
 			children = (
 				E724B5481F6459E800A3964D /* pennapps-xvi */,
 				E724B55D1F6459E900A3964D /* pennapps-xviTests */,
 				E724B5471F6459E800A3964D /* Products */,
+				14A668FE4C8E0A771483BB46 /* Pods */,
+				CB55F0AFA0459393C5F33A7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +158,7 @@
 			children = (
 				E724B56B1F645D9500A3964D /* Secrets */,
 				E724B56D1F645D9500A3964D /* Security */,
+				E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -129,7 +166,7 @@
 		E724B56B1F645D9500A3964D /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
-				E724B57C1F645E3100A3964D /* APIKeys.swift */,
+				E79E98381F64F634000B412A /* APIKeys.swift */,
 			);
 			path = Secrets;
 			sourceTree = "<group>";
@@ -144,6 +181,7 @@
 		E724B56E1F645D9500A3964D /* Supporting-Files */ = {
 			isa = PBXGroup;
 			children = (
+				E76B80241F64971C009EFC3E /* Randomizer.swift */,
 			);
 			path = "Supporting-Files";
 			sourceTree = "<group>";
@@ -198,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E724B5631F6459E900A3964D /* Build configuration list for PBXNativeTarget "pennapps-xvi" */;
 			buildPhases = (
+				626B536D116CCFB868D6D1D0 /* [CP] Check Pods Manifest.lock */,
 				E724B5421F6459E800A3964D /* Sources */,
 				E724B5431F6459E800A3964D /* Frameworks */,
 				E724B5441F6459E800A3964D /* Resources */,
+				2CFB2CB6D7DF359DE01FFFC9 /* [CP] Embed Pods Frameworks */,
+				EF57032DCD83983AE2199FF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E724B5661F6459E900A3964D /* Build configuration list for PBXNativeTarget "pennapps-xviTests" */;
 			buildPhases = (
+				B4298B5A13386040A6FD57EF /* [CP] Check Pods Manifest.lock */,
 				E724B5561F6459E800A3964D /* Sources */,
 				E724B5571F6459E800A3964D /* Frameworks */,
 				E724B5581F6459E800A3964D /* Resources */,
+				6430248D4D3AE9D5D0BEEBC8 /* [CP] Embed Pods Frameworks */,
+				BCE3664E5ED5D8E1A09D8C2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,17 +335,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CFB2CB6D7DF359DE01FFFC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pennapps-xvi/Pods-pennapps-xvi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		626B536D116CCFB868D6D1D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6430248D4D3AE9D5D0BEEBC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pennapps-xviTests/Pods-pennapps-xviTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4298B5A13386040A6FD57EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCE3664E5ED5D8E1A09D8C2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pennapps-xviTests/Pods-pennapps-xviTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF57032DCD83983AE2199FF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pennapps-xvi/Pods-pennapps-xvi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E724B5421F6459E800A3964D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E724B57D1F645E3100A3964D /* APIKeys.swift in Sources */,
+				E79E983B1F64F7A5000B412A /* StreetViewRequests.swift in Sources */,
 				E7C7ADCA1F6489C500912E5C /* Colours.swift in Sources */,
 				E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */,
 				E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */,
 				E7C7ADCE1F64948400912E5C /* PhotoViewController.swift in Sources */,
 				E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */,
+				E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */,
+				E79E98391F64F634000B412A /* APIKeys.swift in Sources */,
 				E724B54A1F6459E800A3964D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +561,7 @@
 		};
 		E724B5641F6459E900A3964D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB4B1284C87C893D0F7AE1E5 /* Pods-pennapps-xvi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L34B92962;
@@ -435,6 +575,7 @@
 		};
 		E724B5651F6459E900A3964D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CECC0553AF146E2F03687A /* Pods-pennapps-xvi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L34B92962;
@@ -448,6 +589,7 @@
 		};
 		E724B5671F6459E900A3964D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68532BC37EC9649958D130E1 /* Pods-pennapps-xviTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -463,6 +605,7 @@
 		};
 		E724B5681F6459E900A3964D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D65620D0923F7C925023122 /* Pods-pennapps-xviTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

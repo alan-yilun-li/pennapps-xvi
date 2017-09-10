@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map!-->
+        <!--Sojourn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="pennapps_xvi" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,28 +30,28 @@
                                 </constraints>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-qa-Ovr">
-                                <rect key="frame" x="24" y="447" width="115" height="59.5"/>
+                                <rect key="frame" x="24" y="447" width="129" height="59.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-nv-1cj" userLabel="Coordinates">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="59.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-nv-1cj" userLabel="Stats">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="59.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-UF-i97" userLabel="Coordinate Header">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-UF-i97" userLabel="Statistics Header">
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-7i-sMD" userLabel="Coordinate Labels">
-                                                <rect key="frame" x="0.0" y="25.5" width="115" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-7i-sMD" userLabel="Stats Details">
+                                                <rect key="frame" x="0.0" y="25.5" width="129" height="34"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: 1491034" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRS-3p-IXU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: 500 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRS-3p-IXU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude: 141930" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNy-t0-upS" userLabel="Longitude Label">
-                                                        <rect key="frame" x="0.0" y="17" width="115" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4l-GZ-ZPR">
+                                                        <rect key="frame" x="0.0" y="17" width="129" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -90,19 +90,19 @@
                             <constraint firstItem="ORo-88-BTs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zwr-6g-gIN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map!" id="AJT-qf-Kvg"/>
+                    <navigationItem key="navigationItem" title="Sojourn" id="AJT-qf-Kvg"/>
                     <connections>
                         <outlet property="addTargetButton" destination="QpL-dk-u2m" id="j2J-iC-8y1"/>
-                        <outlet property="latitudeLabel" destination="lRS-3p-IXU" id="qjB-iO-Ft1"/>
-                        <outlet property="longitudeLabel" destination="rNy-t0-upS" id="Stc-uK-C8p"/>
+                        <outlet property="distanceLabel" destination="lRS-3p-IXU" id="fPF-er-2cX"/>
                         <outlet property="mapView" destination="ORo-88-BTs" id="Hjr-Dq-bFb"/>
+                        <outlet property="timeLabel" destination="z4l-GZ-ZPR" id="LMs-FH-2qS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015.2" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Sojourn-->
         <scene sceneID="S0t-Pa-kWE">
             <objects>
                 <viewController id="dAq-iT-8ud" sceneMemberID="viewController">
@@ -115,13 +115,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Psd-4x-PQ2"/>
+                    <navigationItem key="navigationItem" title="Sojourn" id="Psd-4x-PQ2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDv-Fb-5eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4751.1999999999998" y="-106.59670164917542"/>
         </scene>
-        <!--Pictures to Match-->
+        <!--Sojourn-->
         <scene sceneID="duV-8t-j2W">
             <objects>
                 <viewController id="e0i-Nk-wng" customClass="PhotoViewController" customModule="pennapps_xvi" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,15 +139,25 @@
                                     <constraint firstAttribute="width" secondItem="j4M-hO-Ltv" secondAttribute="height" multiplier="1:1" id="s9W-JG-sFe"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jez-iC-HgY">
+                                <rect key="frame" x="36" y="617" width="303" height="30"/>
+                                <state key="normal" title="Get StreetView Image"/>
+                                <connections>
+                                    <action selector="getStreetViewTapped:" destination="e0i-Nk-wng" eventType="touchUpInside" id="8pi-BP-3hj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="j4M-hO-Ltv" secondAttribute="trailing" id="0Po-eb-iZf"/>
                             <constraint firstItem="j4M-hO-Ltv" firstAttribute="top" secondItem="JLz-bI-J1k" secondAttribute="bottom" id="2fg-Et-XCl"/>
                             <constraint firstItem="j4M-hO-Ltv" firstAttribute="leading" secondItem="Bay-GU-ZI4" secondAttribute="leading" id="MCz-dJ-XWg"/>
+                            <constraint firstItem="jez-iC-HgY" firstAttribute="leading" secondItem="Bay-GU-ZI4" secondAttribute="leadingMargin" constant="20" id="ecs-gU-3hr"/>
+                            <constraint firstItem="Yrp-FM-ico" firstAttribute="top" secondItem="jez-iC-HgY" secondAttribute="bottom" constant="20" id="geR-us-IvJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jez-iC-HgY" secondAttribute="trailing" constant="20" id="nRp-wa-63a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pictures to Match" id="r4j-fy-q1C"/>
+                    <navigationItem key="navigationItem" title="Sojourn" id="r4j-fy-q1C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVF-Ua-DOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

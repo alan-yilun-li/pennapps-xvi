@@ -32,4 +32,34 @@ class PhotoViewController: UIViewController {
     }
     */
 
+    @IBAction func getStreetViewTapped(_ sender: Any) {
+        
+        if let target = Target.current {
+            
+            StreetViewRequest.makeRequest(forTarget: target)
+        } else {
+            
+            let noTargetAlert = UIAlertController(title: "No Target!", message: "There is no target to get a street view of. Sorry!" , preferredStyle: .alert)
+            noTargetAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            present(noTargetAlert, animated: true)
+        }
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,8 +16,8 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addTargetButton: UIButton!
-    @IBOutlet weak var latitudeLabel: UILabel!
-    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     // MARK: - Variables
     
@@ -34,6 +34,7 @@ class MapViewController: UIViewController {
         ViewCustomizer.setup(navigationBar: navigationController?.navigationBar)
         setup(mapView: mapView)
         
+        Target.timeLabel = timeLabel
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,9 +43,8 @@ class MapViewController: UIViewController {
     }
     
     // MARK: - Misc UI Functions
-    func updateCoordinateLabels(with coordinate: CLLocationCoordinate2D) {
-        latitudeLabel.text = "Latitude: \(coordinate.latitude)"
-        longitudeLabel.text = "Longitude: \(coordinate.longitude)"
+    func updateDistanceLabel(forNewLocation: CLLocationCoordinate2D) {
+        
     }
     
     // MARK: - IBActions 
@@ -73,7 +73,10 @@ class MapViewController: UIViewController {
     
     private func giveNewTarget() {
         
+        // Getting the new coordinates
         let targetCoordinate = mapView.userLocation.coordinate.randomize()
+        
+        // Dealing with the mapView
         mapView.removeAnnotations(mapView.annotations)
         
         let mapAnnotation = MKPointAnnotation()
@@ -81,6 +84,10 @@ class MapViewController: UIViewController {
         mapAnnotation.title = "TARGET_PIN"
     
         mapView.addAnnotation(mapAnnotation)
+        
+        // Setting the target model
+        Target.current = Target(pin: mapAnnotation)
+        Target.current?.startTimer()
     }
 
 }
@@ -99,7 +106,7 @@ extension MapViewController: MKMapViewDelegate {
         if (annotation.title != nil) && (annotation.title! == "TARGET_PIN") {
             let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinview")
             view.animatesDrop = true
-            return view 
+            return view
         } else {
             return nil
         }
@@ -107,17 +114,13 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
-        print("Updating user location")
-        updateCoordinateLabels(with: userLocation.coordinate)
+        if let target = Target.current {
+            let distance = target.location.distance(from: userLocation.location!)
+            distanceLabel.text = "Distance: \(distance) meters"
+        } else {
+            distanceLabel.text = "No current target!"
+        }
     }
-    /*
-    func mapViewWillStartLocatingUser(_ mapView: MKMapView) {
-        
-        print("Did start locating user")
-        let userLocation = mapView.userLocation
-        coordinatesLabel.text = "Latitude: \(userLocation.coordinate.latitude), Longitude: \(userLocation.coordinate.longitude)"
-    }*/
-    
 }
 
 

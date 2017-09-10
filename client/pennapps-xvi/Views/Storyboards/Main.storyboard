@@ -30,28 +30,28 @@
                                 </constraints>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-qa-Ovr">
-                                <rect key="frame" x="24" y="447" width="115" height="59.5"/>
+                                <rect key="frame" x="24" y="447" width="129" height="59.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-nv-1cj" userLabel="Coordinates">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="59.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-nv-1cj" userLabel="Stats">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="59.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-UF-i97" userLabel="Coordinate Header">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-UF-i97" userLabel="Statistics Header">
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-7i-sMD" userLabel="Coordinate Labels">
-                                                <rect key="frame" x="0.0" y="25.5" width="115" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-7i-sMD" userLabel="Stats Details">
+                                                <rect key="frame" x="0.0" y="25.5" width="129" height="34"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: 1491034" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRS-3p-IXU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: 500 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRS-3p-IXU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude: 141930" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNy-t0-upS" userLabel="Longitude Label">
-                                                        <rect key="frame" x="0.0" y="17" width="115" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4l-GZ-ZPR">
+                                                        <rect key="frame" x="0.0" y="17" width="129" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -93,9 +93,9 @@
                     <navigationItem key="navigationItem" title="Map!" id="AJT-qf-Kvg"/>
                     <connections>
                         <outlet property="addTargetButton" destination="QpL-dk-u2m" id="j2J-iC-8y1"/>
-                        <outlet property="latitudeLabel" destination="lRS-3p-IXU" id="qjB-iO-Ft1"/>
-                        <outlet property="longitudeLabel" destination="rNy-t0-upS" id="Stc-uK-C8p"/>
+                        <outlet property="distanceLabel" destination="lRS-3p-IXU" id="fPF-er-2cX"/>
                         <outlet property="mapView" destination="ORo-88-BTs" id="Hjr-Dq-bFb"/>
+                        <outlet property="timeLabel" destination="z4l-GZ-ZPR" id="LMs-FH-2qS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

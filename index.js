@@ -17,9 +17,11 @@ request.get('https://static.pexels.com/photos/39803/pexels-photo-39803.jpeg', fu
 });
 
 
-app.get('/getSimilarity', function (req, res) {
+app.post('/getSimilarity', function (req, res) {
   console.log("hi");  
-    console.log(getSimilar(data, data))
+        file1 = res.body;
+        console.log(file1);
+    console.log(getSimilar("https://static.pexels.com/photos/39803/pexels-photo-39803.jpeg", "https://static.pexels.com/photos/39803/pexels-photo-39803.jpeg"))
 })
 
 
@@ -28,19 +30,8 @@ app.listen(8000, function () {
   console.log('Example app listening on port 8000!')
 })
 
-
-
-
-function base64_decode(base64str,file) {
-   var bitmap = new Buffer(base64str,'base64');
-   //writing into an image file
-   fs.writeFile(file, bitmap);
-   //write a text file
-   console.log('File created from base64 encoded string');
-}
-
 function getSimilar(file, file2) {
-    var input = ["https://static.pexels.com/photos/39803/pexels-photo-39803.jpeg","https://static.pexels.com/photos/39803/pexels-photo-39803.jpeg"];
+    var input = [file,file2];
 Algorithmia.client("simMbk6Hq9wmw16NmAYPL5NyCRp1")
            .algo("algo://zskurultay/ImageSimilarity/0.1.4")
            .pipe(input)

@@ -7,9 +7,58 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PhotoViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    @IBOutlet weak var webView: UIWebView!
+    
+    
+    private var incrementer = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if Target.current != nil {
+            
+            DispatchQueue.main.async {
+                
+                LoadingView.showLoadingIndicator(onView: self.view, message: "Loading...")
+                self.view.bringSubview(toFront: self.webView)
+            }
+            
+            DispatchQueue.global(qos: .userInitiated).async { [unowned self] _ in
+                
+                let severity: Double = 100000
+                let latitude = round(Target.current!.location.coordinate.latitude * severity) / severity
+                let longitude = round(Target.current!.location.coordinate.longitude * severity) / severity
+                
+                let locationString = "\(latitude),\(longitude)"
+                print(locationString)
+                
+                let size = Int(self.webView.frame.width)
+                let sizeString = "\(size)x\(size)"
+                
+                let postString = "location=\(locationString)&" + "size=\(sizeString)&" + "key=\(APIKeys.GOOGLE_API_KEY)"
+                print(postString)
+                var request = URLRequest(url: URL(string: "https://maps.googleapis.com/maps/api/streetview?" + postString)!)
+                request.httpMethod = "POST"
+                //request.httpBody = postString.data(using: .utf8)
+                
+                self.webView.delegate = self
+                self.webView.loadRequest(request)
+                
+            }
+            
+        } else {
+            view.bringSubview(toFront: photoImageView)
+            photoImageView.image = #imageLiteral(resourceName: "No Image")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,34 +70,30 @@ class PhotoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    @IBAction func getStreetViewTapped(_ sender: Any) {
-        
-        if let target = Target.current {
-            
-            StreetViewRequest.makeRequest(forTarget: target)
-        } else {
-            
-            let noTargetAlert = UIAlertController(title: "No Target!", message: "There is no target to get a street view of. Sorry!" , preferredStyle: .alert)
-            noTargetAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
-            present(noTargetAlert, animated: true)
-        }
-        
-    }
 }
 
 
+extension PhotoViewController: UIWebViewDelegate {
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        LoadingView.removingLoadingIndicator()
+        
+        UIGraphicsBeginImageContext(webView.frame.size)
+        
+        let context = UIGraphicsGetCurrentContext()
+        webView.layer.render(in: context!)
+        
+        Target.current.photo = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        print(error)
+    }
+}
 
 
 

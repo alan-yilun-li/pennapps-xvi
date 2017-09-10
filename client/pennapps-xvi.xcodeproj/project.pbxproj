@@ -22,6 +22,8 @@
 		E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADCB1F648B8F00912E5C /* ViewCustomizer.swift */; };
 		E7C7ADCE1F64948400912E5C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADCD1F64948400912E5C /* PhotoViewController.swift */; };
 		E7CB80841F65022600AD82B0 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB80831F65022600AD82B0 /* APIKeys.swift */; };
+		E7CB80861F65178500AD82B0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB80851F65178500AD82B0 /* CameraViewController.swift */; };
+		E7CB80881F651CDE00AD82B0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB80871F651CDE00AD82B0 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		E7C7ADCB1F648B8F00912E5C /* ViewCustomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustomizer.swift; sourceTree = "<group>"; };
 		E7C7ADCD1F64948400912E5C /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E7CB80831F65022600AD82B0 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIKeys.swift; path = "pennapps-xvi/Networking/APIKeys.swift"; sourceTree = SOURCE_ROOT; };
+		E7CB80851F65178500AD82B0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		E7CB80871F651CDE00AD82B0 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 			children = (
 				E724B5701F645D9500A3964D /* Cells */,
 				E724B5711F645D9500A3964D /* Storyboards */,
+				E7CB80871F651CDE00AD82B0 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			children = (
 				E7C7ADC51F64705700912E5C /* MapViewController.swift */,
 				E7C7ADCD1F64948400912E5C /* PhotoViewController.swift */,
+				E7CB80851F65178500AD82B0 /* CameraViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -434,7 +440,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79E983B1F64F7A5000B412A /* StreetViewRequests.swift in Sources */,
+				E7CB80861F65178500AD82B0 /* CameraViewController.swift in Sources */,
 				E7C7ADCA1F6489C500912E5C /* Colours.swift in Sources */,
+				E7CB80881F651CDE00AD82B0 /* LoadingView.swift in Sources */,
 				E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */,
 				E7CB80841F65022600AD82B0 /* APIKeys.swift in Sources */,
 				E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */,

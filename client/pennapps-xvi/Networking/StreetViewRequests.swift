@@ -13,6 +13,8 @@ private let key = APIKeys.GOOGLE_API_KEY
 
 class StreetViewRequest {
     
+    static var arrayOfStuff = [#imageLiteral(resourceName: "test1"), #imageLiteral(resourceName: "test2"),#imageLiteral(resourceName: "test3"),#imageLiteral(resourceName: "test4")]
+    
     static func makeRequest(forTarget target: Target) {
         
         let coordinate = target.location.coordinate
@@ -23,9 +25,19 @@ class StreetViewRequest {
             "key": key
         ]
         
-        Alamofire.request("https://maps.googleapis.com/maps/api/streetview", method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).response(completionHandler: { (response) in
+        Alamofire.request("https://maps.googleapis.com/maps/api/streetview", method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseData(completionHandler: { (response) in
             
-            print(response)
+            print(response.result)
+            
+            if let data = response.result.value {
+                
+                let image = UIImage(data: data)
+                Target.current?.photo = image
+                
+            } else {
+                print("huh")
+            }
+            
         })
     }
     

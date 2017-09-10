@@ -10,7 +10,7 @@ import Foundation
 
 class APIKeys {
     
-    static let GOOGLE_API_KEY = "AIzaSyDNPYaevc0c2R9rl9LqL5UGt-mGoykLzow"
+    static let GOOGLE_API_KEY = "AIzaSyDNmpfnDbsU4BTXZ75QprDzD42khgXEYcM"
     
 
 }

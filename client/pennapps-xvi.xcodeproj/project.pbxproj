@@ -14,6 +14,7 @@
 		E724B55F1F6459E900A3964D /* pennapps_xviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724B55E1F6459E900A3964D /* pennapps_xviTests.swift */; };
 		E724B5751F645D9500A3964D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5721F645D9500A3964D /* LaunchScreen.storyboard */; };
 		E724B5761F645D9500A3964D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5731F645D9500A3964D /* Main.storyboard */; };
+		E76877201F653E4600FF5EBA /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768771F1F653E4600FF5EBA /* ImageSaver.swift */; };
 		E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B80241F64971C009EFC3E /* Randomizer.swift */; };
 		E79E983B1F64F7A5000B412A /* StreetViewRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */; };
 		E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC51F64705700912E5C /* MapViewController.swift */; };
@@ -52,6 +53,7 @@
 		E724B5601F6459E900A3964D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E724B5721F645D9500A3964D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E724B5731F645D9500A3964D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E768771F1F653E4600FF5EBA /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		E76B80241F64971C009EFC3E /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewRequests.swift; sourceTree = "<group>"; };
 		E7C7ADC51F64705700912E5C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				E76B80241F64971C009EFC3E /* Randomizer.swift */,
+				E768771F1F653E4600FF5EBA /* ImageSaver.swift */,
 			);
 			path = "Supporting-Files";
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */,
 				E7CB80841F65022600AD82B0 /* APIKeys.swift in Sources */,
 				E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */,
+				E76877201F653E4600FF5EBA /* ImageSaver.swift in Sources */,
 				E7C7ADCE1F64948400912E5C /* PhotoViewController.swift in Sources */,
 				E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */,
 				E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */,

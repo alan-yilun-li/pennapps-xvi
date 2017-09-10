@@ -80,14 +80,15 @@ extension PhotoViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         LoadingView.removingLoadingIndicator()
-        
-        UIGraphicsBeginImageContext(webView.frame.size)
-        
-        let context = UIGraphicsGetCurrentContext()
-        webView.layer.render(in: context!)
-        
-        Target.current.photo = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        if let target = Target.current {
+            UIGraphicsBeginImageContext(webView.frame.size)
+            
+            let context = UIGraphicsGetCurrentContext()
+            webView.layer.render(in: context!)
+            
+            target.photo = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {

@@ -8,6 +8,7 @@ target 'pennapps-xvi' do
   # Pods for pennapps-xvi
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'algorithmia'
 
   target 'pennapps-xviTests' do
     inherit! :search_paths

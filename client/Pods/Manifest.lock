@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.5.0)
+  - algorithmia (0.1.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - algorithmia
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  algorithmia: 96845d613f35d6ec555c0ab54bf620a285cdb2d4
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 56e424ad66fa7c8d4a17214d330f3068a0ce4439
+PODFILE CHECKSUM: d58899875d84ae123f1c232ff95908b272b8f298
 
 COCOAPODS: 1.2.1

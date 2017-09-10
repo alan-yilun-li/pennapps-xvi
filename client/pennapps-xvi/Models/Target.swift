@@ -22,7 +22,11 @@ class Target {
     
     let location: CLLocation
     
-    var photo: UIImage!
+    var photo: UIImage! {
+        didSet {
+            ImageSaver.saveTakenImage(photo)
+        }
+    }
     
     var stopWatch: Timer!
     

@@ -7,17 +7,14 @@
 //
 
 import UIKit
+import algo
 
 class CameraViewController: UIViewController {
 
-    @IBOutlet weak var testImageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ViewCustomizer.setup(navigationBar: navigationController?.navigationBar)
-        
-        testImageView.image = Target.current.photo
         
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
@@ -56,6 +53,11 @@ extension CameraViewController: UIImagePickerControllerDelegate {
             
             LoadingView.showLoadingIndicator(onView: self.view, message: "Checking Photo")
         })
+        
+        
+        
+        
+        let client = Algorithmia.client(simpleKey: "sim+LlkWn9DHbQcXkiK8W8l1PQP1")
 
     }
     

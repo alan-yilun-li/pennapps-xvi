@@ -113,18 +113,9 @@
                     <view key="view" contentMode="scaleToFill" id="hZV-VS-OFA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aY0-iV-G3R">
-                                <rect key="frame" x="42" y="152" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sojourn" id="Psd-4x-PQ2"/>
-                    <connections>
-                        <outlet property="testImageView" destination="aY0-iV-G3R" id="XQX-br-Hec"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDv-Fb-5eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

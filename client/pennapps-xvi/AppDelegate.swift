@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import algorithmia
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     
+    static let client = Algorithmia.client(simpleKey: "sim+LlkWn9DHbQcXkiK8W8l1PQP1")
+    
+    static var storage: AlgoDataDirectory!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -29,6 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             cameraViewController.tabBarItem = UITabBarItem(title: "Camera", image: #imageLiteral(resourceName: "camera"), tag: 2)
             tabBarController.viewControllers?.append(cameraViewController)
         }
+        
+        AppDelegate.storage = AppDelegate.client.dir("data://.my/storage")
+        AppDelegate.storage.create { error in
+            print("CREATE ERROR: \(String(describing: error))")
+        }
+
 
         return true
     }

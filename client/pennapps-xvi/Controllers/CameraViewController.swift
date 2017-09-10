@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import algo
+import algorithmia
 
 class CameraViewController: UIViewController {
 
@@ -48,17 +48,39 @@ extension CameraViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        ImageSaver.shared.saveTakenImage(image: image)
         
         dismiss(animated: true, completion: { [unowned self] _ in
             
             LoadingView.showLoadingIndicator(onView: self.view, message: "Checking Photo")
         })
         
+        AppDelegate.storage.put(file: ImageSaver.shared.ownImageURL, completion: { (file, err) in
+            print(err)
+            
+        })
         
         
+        AppDelegate.storage.put(file: ImageSaver.shared.targetImageURL, completion: { (file, err) in
+            print(err)
+            
+        })
         
-        let client = Algorithmia.client(simpleKey: "sim+LlkWn9DHbQcXkiK8W8l1PQP1")
-
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { _ in
+        
+            let input = "[\"data://.my/storage/\(ImageSaver.shared.ownImageName)\",\"data://.my/storage/\(ImageSaver.shared.targetImageName)\"]"
+            
+            print("INPUT: \(input)")
+            let client = Algorithmia.client(simpleKey: "sim+LlkWn9DHbQcXkiK8W8l1PQP1")
+            let algo = client.algo(algoUri: "zskurultay/ImageSimilarity/0.1.4").pipe(rawJson: input, completion: { (resp, err) in
+                
+                print(resp)
+                
+                if let error = err {
+                    print(error)
+                }
+            })
+        })
     }
     
     

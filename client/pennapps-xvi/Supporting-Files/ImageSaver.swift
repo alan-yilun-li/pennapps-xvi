@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ImageSaver {
     
@@ -14,19 +15,25 @@ class ImageSaver {
     
     private init() {}
     
-    private let documentDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first
+    private let fileDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first
+    
+    var targetImageName = "target.jpg"
+    
+    var ownImageName = "own.jpg"
     
     var targetImageURL: URL {
-        let location = URL(string: URL(fileURLWithPath: fileDirectory).appendingPathComponent("target.jpg", isDirectory: false))!
+        let location = fileDirectory!.appendingPathComponent(targetImageName, isDirectory: false)
+        return location
     }
     
     var ownImageURL: URL {
-        let location = URL(string: URL(fileURLWithPath: fileDirectory).appendingPathComponent("own.jpg", isDirectory: false))!
+        let location = fileDirectory!.appendingPathComponent(ownImageName, isDirectory: false)
+        return location
     }
     
     func saveTargetImage(image: UIImage) {
         do {
-            try UIImageJPEGRepresentation(newValue!, 1.0)!.write(to: targetImageURL, options: [.atomic])
+            try UIImageJPEGRepresentation(image, 1.0)!.write(to: targetImageURL, options: [.atomic])
         } catch (let error) {
             print("error: \(error)")
         }
@@ -34,7 +41,7 @@ class ImageSaver {
     
     func saveTakenImage(image:UIImage) {
         do {
-            try UIImageJPEGRepresentation(newValue!, 1.0)!.write(to: ownImageURL, options: [.atomic])
+            try UIImageJPEGRepresentation(image, 1.0)!.write(to: ownImageURL, options: [.atomic])
         } catch (let error) {
             print("error: \(error)")
         }

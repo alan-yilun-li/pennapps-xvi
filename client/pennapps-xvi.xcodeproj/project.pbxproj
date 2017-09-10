@@ -15,13 +15,13 @@
 		E724B5751F645D9500A3964D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5721F645D9500A3964D /* LaunchScreen.storyboard */; };
 		E724B5761F645D9500A3964D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E724B5731F645D9500A3964D /* Main.storyboard */; };
 		E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76B80241F64971C009EFC3E /* Randomizer.swift */; };
-		E79E98391F64F634000B412A /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E98381F64F634000B412A /* APIKeys.swift */; };
 		E79E983B1F64F7A5000B412A /* StreetViewRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */; };
 		E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC51F64705700912E5C /* MapViewController.swift */; };
 		E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC71F647D3A00912E5C /* Target.swift */; };
 		E7C7ADCA1F6489C500912E5C /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADC91F6489C500912E5C /* Colours.swift */; };
 		E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADCB1F648B8F00912E5C /* ViewCustomizer.swift */; };
 		E7C7ADCE1F64948400912E5C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C7ADCD1F64948400912E5C /* PhotoViewController.swift */; };
+		E7CB80841F65022600AD82B0 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB80831F65022600AD82B0 /* APIKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +51,13 @@
 		E724B5721F645D9500A3964D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E724B5731F645D9500A3964D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E76B80241F64971C009EFC3E /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
-		E79E98381F64F634000B412A /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		E79E983A1F64F7A5000B412A /* StreetViewRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewRequests.swift; sourceTree = "<group>"; };
 		E7C7ADC51F64705700912E5C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E7C7ADC71F647D3A00912E5C /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		E7C7ADC91F6489C500912E5C /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		E7C7ADCB1F648B8F00912E5C /* ViewCustomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustomizer.swift; sourceTree = "<group>"; };
 		E7C7ADCD1F64948400912E5C /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		E7CB80831F65022600AD82B0 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIKeys.swift; path = "pennapps-xvi/Networking/APIKeys.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +166,7 @@
 		E724B56B1F645D9500A3964D /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
-				E79E98381F64F634000B412A /* APIKeys.swift */,
+				E7CB80831F65022600AD82B0 /* APIKeys.swift */,
 			);
 			path = Secrets;
 			sourceTree = "<group>";
@@ -436,11 +436,11 @@
 				E79E983B1F64F7A5000B412A /* StreetViewRequests.swift in Sources */,
 				E7C7ADCA1F6489C500912E5C /* Colours.swift in Sources */,
 				E7C7ADC61F64705700912E5C /* MapViewController.swift in Sources */,
+				E7CB80841F65022600AD82B0 /* APIKeys.swift in Sources */,
 				E7C7ADCC1F648B8F00912E5C /* ViewCustomizer.swift in Sources */,
 				E7C7ADCE1F64948400912E5C /* PhotoViewController.swift in Sources */,
 				E7C7ADC81F647D3A00912E5C /* Target.swift in Sources */,
 				E76B80251F64971C009EFC3E /* Randomizer.swift in Sources */,
-				E79E98391F64F634000B412A /* APIKeys.swift in Sources */,
 				E724B54A1F6459E800A3964D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

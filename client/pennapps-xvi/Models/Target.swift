@@ -26,27 +26,37 @@ class Target {
     
     var stopWatch: Timer!
     
-    /// Time in seconds
-    private var time: Int = 0
+    /// Time in deciseconds
+    private var time: TimeInterval = 0
 
     init(pin: MKAnnotation) {
         self.pin = pin
         self.location = CLLocation(latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude)
-        
+    }
+    
+    deinit {
+        stopWatch.invalidate()
     }
     
     func startTimer() {
-        stopWatch = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [unowned self] _ in
+        stopWatch = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [unowned self] _ in
             
-            self.time += 1
+            self.time += 0.01
             
+            if self.time >= (60 * 60 * 100) {
+                Target.timeLabel.text = "Too long!"
+                self.stopWatch.invalidate()
+            }
+
+            let deciseconds = Int(self.time * 100) % 100
             let seconds = Int(self.time) % 60
             let minutes = Int(self.time / 60) % 60
             
+            let decisecondsString = deciseconds < 10 ? "0\(deciseconds)" : "\(deciseconds)"
             let secondsString = seconds < 10 ? "0\(seconds)" : "\(seconds)"
             let minutesString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
             
-            Target.timeLabel.text = "Time: \(minutesString):\(secondsString)"
+            Target.timeLabel.text = "Time: \(minutesString):\(secondsString):\(decisecondsString)"
         })
     }
     
